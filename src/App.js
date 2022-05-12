@@ -1,9 +1,11 @@
 import './App.css';
+import NavBar from './components/NavBar/NavBar.js'
 
 function App() {
   return (
     <div className="App">
-      <h1> Ecommerce TodoElectronica</h1>
+      <NavBar />
+      <h1> Ecommerce TodoCelulares</h1>
     </div>
   );
 }

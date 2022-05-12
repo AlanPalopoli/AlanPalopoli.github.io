@@ -1,0 +1,16 @@
+.navbar {
+    width: 100%;
+}
+
+.imgLogo{
+    width:100px;
+}
+
+.imgTitulo{
+    justify-content: center;
+    width: 400px;
+}
+
+.imgCarrito{
+    width: 50px;
+  }

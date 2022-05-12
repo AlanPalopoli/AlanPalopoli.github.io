@@ -1,4 +1,4 @@
-# Ecommerce TodoElectronica
+# Ecommerce TodoCelulares
 
 Este proyecto está realizado con React 
 
