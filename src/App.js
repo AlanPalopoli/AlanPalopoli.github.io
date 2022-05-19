@@ -1,11 +1,12 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar.js'
+import ItemListContainer from './components/CardsItems/ItemListContainer.js'
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <h1> Ecommerce TodoCelulares</h1>
+      <ItemListContainer  title = {'Lista de objetos'}/>
     </div>
   );
 }
