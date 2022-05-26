@@ -1,11 +1,11 @@
 import Button from '@mui/material/Button';
 import { useState } from 'react';
-import './ItemCount.css';
+import './Item.css';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
-const ItemCount = ({stock, tittle}) => {
+const Item = ({tittle, image, price, stock }) => {
     const [countItem, setCount] = useState(1)
 
     const addItem = () => {
@@ -21,20 +21,25 @@ const ItemCount = ({stock, tittle}) => {
     }
 
     return (
-        <Card sx={{ minWidth: 275 }}>
-            <CardContent className="card-item">
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        <Card sx={{ minWidth: 275 }} className='cardContainer'>
+            <div className='card-item'>
+                <Typography sx={{ fontSize: 15 }} variant="overline" display="block" color="text.secondary" gutterBottom>
                 {tittle}
                 </Typography>
-            </CardContent>
+            </div>
+            <div className='card-item-img'>
+                <img src={`/img/${image}`} alt={"producto"}/> 
+            </div>
             <div className='countItem'>
                 <Button onClick={removeItem} variant="outlined" className='button-count'>-</Button>
                 <p>{countItem}</p>
                 <Button onClick={addItem} variant="outlined">+</Button>
             </div>
-            <Button /* onClick={addItem} */ variant="outlined" className='button-cart'>Agregar al carrito</Button>
+            <div className='button-cart'>
+                <Button /* onClick={addItem} */ variant="outlined" >Agregar al carrito</Button>
+            </div>
         </Card>
     )
 }
 
-export default ItemCount
+export default Item

@@ -1,26 +1,65 @@
-import ItemCount from './ItemCount.js';
-import { Grid } from '@mui/material';
+import ItemList from './ItemList.js';
+import { useState, useEffect } from 'react';
 
 
 const ItemListContainer = () => {
+    const [products , setProducts] = useState([])
+
+    const productos = [
+        {
+            tittle : 'Iphone 7',
+            price : 2000,
+            image: 'iphone13.png',
+            description: '',
+            stock: 4,
+            id: 1
+        },
+        {
+            tittle : 'Samsung J7',
+            price : 2000,
+            image: 'samsungj7.png',
+            description: '',
+            stock: 6,
+            id: 2
+        },
+        {
+            tittle : 'Iphone 11',
+            price : 2000,
+            image: 'iphone13.png',
+            description: '',
+            stock: 2,
+            id: 3
+        },
+        {
+            tittle : 'Iphone 13',
+            price : 2000,
+            image: 'iphone13.png',
+            description: '',
+            stock: 10,
+            id: 4
+        }
+    ]
+
+    const getProducts = () => {
+        return new Promise( (resolve, reject) => {
+            setTimeout(() => {
+                resolve(productos)
+            }, 2000)
+        })
+    }
+
+    useEffect( () => {
+        getProducts()
+        .then((response) => {
+            setProducts(response)
+        })
+        .catch((err) => {
+            console.log("Fallo la llamada de products" , err)
+        })
+    })
+
     return (
-        <div>
-             <Grid container spacing={2}>
-                <Grid item md={3}>
-                    <ItemCount tittle = {"Iphone 7"}  stock = {"5"}/>
-                </Grid>
-                <Grid item md={3}>
-                    <ItemCount tittle = {"Samsung Galaxy"}  stock = {"5"}/>
-                </Grid>
-                <Grid item md={3}>
-                    <ItemCount tittle = {"Xiaomi 1000"} stock = {"5"}/>
-                </Grid>
-                <Grid item md={3}>
-                    <ItemCount tittle = {"Motorola"}  stock = {"2"}/>
-                </Grid>
-                </Grid>
-        </div>
-        
+        <ItemList  products={products} />
     )
 }
 

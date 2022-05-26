@@ -1,0 +1,31 @@
+.countItem {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+
+.card-item {
+    margin-top: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.cardContainer {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 2em;
+    border: 1px solid #ccc;
+}
+
+.button-count {
+    display: flex;
+}
+
+.button-cart {
+    margin-bottom: 1em;
+}
+
+.card-item-img  img{
+    width: 50%;
+    height: 320px; /* Modificar tamaño de las imagenes para evitar esto */
+}
