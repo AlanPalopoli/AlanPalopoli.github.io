@@ -26,10 +26,10 @@ const NavBar = () => {
                     <AppBar position="static" color='primary'>
                         <Toolbar>
                             <LogoWidget/>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 , marginTop: 2}}>
                             <img 
                                 className='imgTitulo' 
-                                src="img/TODOCELULARES.png" 
+                                src="img/TODOELECTRONICA.png" 
                                 alt={"Foto Titulo"}
                             />
                         </Typography>

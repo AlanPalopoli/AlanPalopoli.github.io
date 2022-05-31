@@ -1,4 +1,4 @@
-import Item from './Item.js';
+import Card from '../CardsItems/Card.js';
 import { Grid } from '@mui/material';
 
 const ItemList = ({products}) => {
@@ -10,7 +10,7 @@ const ItemList = ({products}) => {
                     products.map( ({tittle, price, image, id, stock}) => {
                         return (
                             <Grid item md={3} key={id}>
-                                <Item tittle = {tittle} price= {price} image = {image} stock= {stock}/>
+                                <Card tittle = {tittle} price= {price} image = {image} stock= {stock}/>
                             </Grid>
                         )
                     })

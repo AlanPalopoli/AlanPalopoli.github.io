@@ -1,8 +1,7 @@
 import Button from '@mui/material/Button';
 import { useState } from 'react';
-import './Item.css';
+import './Card.css';
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
 const Item = ({tittle, image, price, stock }) => {
@@ -29,6 +28,9 @@ const Item = ({tittle, image, price, stock }) => {
             </div>
             <div className='card-item-img'>
                 <img src={`/img/${image}`} alt={"producto"}/> 
+            </div>
+            <div>
+                <h3>${price}</h3>
             </div>
             <div className='countItem'>
                 <Button onClick={removeItem} variant="outlined" className='button-count'>-</Button>
