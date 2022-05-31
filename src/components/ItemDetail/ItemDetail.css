@@ -1,0 +1,54 @@
+.imgProductoDetail1 {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.imgProductoDetailMini {
+    width: 100%;
+    height: 100%;
+    max-width: 90px;
+    max-height: 90px;
+    object-fit: contain;
+}
+
+.sectionItemDetail {
+    margin-top: 2em;
+}
+
+.itemDetailBrand{
+    color:#5c75da;
+    text-align: left;
+}
+
+.itemDetailTittle {
+    text-align: left;
+}
+
+.itemDetailPrice{
+    color:#5c75da;
+    text-align: left;
+
+}
+
+.itemDetailCount {
+    width: 50%;
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.itemDetailCount button {
+    height: 50%;
+    margin-top: 1em;
+}
+
+.itemDetailCount h3 {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.buttonBuyItemDetail button {
+    width: 100%;
+}
