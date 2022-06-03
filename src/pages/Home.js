@@ -15,9 +15,9 @@ const Home = () => {
     
     const getProducts = () => {
         return new Promise( (resolve, reject) => {
-            setTimeout(() => {
+            //setTimeout(() => {
                 resolve(productos)
-            }, 1000)
+            //}, 1000)
         })
     }  
 

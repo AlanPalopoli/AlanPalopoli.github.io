@@ -8,18 +8,6 @@ const ItemListContainer = ({title}) => {
     const [products , setProducts] = useState([])
     const { category } = useParams()
     
-    useEffect( () => {
-        //setProducts([])
-        getProducts()
-        .then((response) => {
-            //setProducts(response)
-            filterProducts(response)
-        })
-        .catch((err) => {
-            console.log("Fallo la llamada de products" , err)
-        })
-    }, [])
-
     const getProducts = () => {
         return new Promise( (resolve, reject) => {
             //setTimeout(() => {
@@ -27,11 +15,25 @@ const ItemListContainer = ({title}) => {
             //}, 2000)
         })
     }
+    
+    useEffect( () => {
+        setProducts([])
+        getProducts()
+        .then((response) => {
+            //setProducts(response)
+            filterProducts(response)
+            console.log("ENTRO EN USE EFFECT")
+        })
+        .catch((err) => {
+            console.log("Fallo la llamada de products" , err)
+        })
+    }, [category])
+
 
     const filterProducts = (arrayProducts) => {
         return arrayProducts.map((product) => { 
             if(product.category == category){
-                setProducts(products => [...products, product])
+                return setProducts(products => [...products, product])
             }
         })
     }

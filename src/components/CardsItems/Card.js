@@ -32,7 +32,7 @@ const Item = ({tittle, image, price, stock, id}) => {
             </div>
             <div>
                 <Button variant={'contained'}>
-                    <Link to={`/products/${id}`}>Ver Producto</Link>
+                    <Link to={`/product/${id}`}>Ver Producto</Link>
                 </Button>
             </div>
             <div>

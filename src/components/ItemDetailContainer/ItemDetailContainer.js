@@ -28,10 +28,10 @@ const ItemDetailContainer = () => {
         }) */
         if(filterProduct === undefined){
             navigate('/NotFound')
-        }
-        else {
+        } 
+         else {
             setProduct(filterProduct)
-        }
+         }
     }, [id])
 
     const filterProduct = productos.find( (product) => {
