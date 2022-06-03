@@ -5,6 +5,7 @@ const productos = [
         price : 2000,
         image: 'iphone13.png',
         description: '',
+        category: 'celulares',
         stock: 4,
         id: 1
     },
@@ -14,6 +15,7 @@ const productos = [
         price : 2000,
         image: 'samsungj7.png',
         description: '',
+        category: 'celulares',
         stock: 6,
         id: 2
     },
@@ -23,6 +25,7 @@ const productos = [
         price : 2000,
         image: 'TvSamsung4k.png',
         description: '',
+        category: 'televisores',
         stock: 2,
         id: 3
     },
@@ -32,12 +35,13 @@ const productos = [
         price : 2000,
         image: 'Playstation5.png',
         description: '',
+        category: 'consolas',
         stock: 10,
         id: 4
     }
 ]
 
-const producto = {
+/* const producto = {
     tittle : 'Iphone 7',
     brand : 'Apple',
     price : '$240.000',
@@ -46,6 +50,6 @@ const producto = {
     stock: 4,
     id: 1
 }
-
+ */
 export default productos
-export {producto}
+/* export {producto} */

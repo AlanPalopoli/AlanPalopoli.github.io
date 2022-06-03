@@ -3,8 +3,9 @@ import { useState } from 'react';
 import './Card.css';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom'
 
-const Item = ({tittle, image, price, stock }) => {
+const Item = ({tittle, image, price, stock, id}) => {
     const [countItem, setCount] = useState(1)
 
     const addItem = () => {
@@ -30,12 +31,17 @@ const Item = ({tittle, image, price, stock }) => {
                 <img src={`/img/${image}`} alt={"producto"}/> 
             </div>
             <div>
+                <Button variant={'contained'}>
+                    <Link to={`/products/${id}`}>Ver Producto</Link>
+                </Button>
+            </div>
+            <div>
                 <h3>${price}</h3>
             </div>
             <div className='countItem'>
-                <Button onClick={removeItem} variant="outlined" className='button-count'>-</Button>
+                <Button onClick={removeItem} variant="outlined" className='button-count' sx={{minWidth:'34px'}}>-</Button>
                 <p>{countItem}</p>
-                <Button onClick={addItem} variant="outlined">+</Button>
+                <Button onClick={addItem} variant="outlined" sx={{minWidth:'34px'}}>+</Button>
             </div>
             <div className='button-cart'>
                 <Button /* onClick={addItem} */ variant="outlined" >Agregar al carrito</Button>

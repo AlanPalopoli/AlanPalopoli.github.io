@@ -1,29 +1,42 @@
 import ItemDetail from "../ItemDetail/ItemDetail"
-import { producto } from "../../utils/productsMocks"
+import  productos  from "../../utils/productsMocks"
 import { useState, useEffect } from 'react';
+import { useParams, useNavigate } from "react-router-dom";
 
 
 
 const ItemDetailContainer = () => {
+    const { id } = useParams()
+    const navigate = useNavigate()
     const [product, setProduct] = useState({})
     
-    const getItem = () => {
+/*     const getItem = () => {
         return new Promise( (resolve, reject) => {
             setTimeout(() => {
-                resolve(producto)
+                resolve(productos)
             }, 2000)
         })
-    }
+    } */
 
     useEffect( () => {
-        getItem()
+        /* getItem()
         .then((response) => {
             setProduct(response)
         })
         .catch((err) => {
             console.log("Fallo la llamada de products" , err)
-        })
-    }, [])
+        }) */
+        if(filterProduct === undefined){
+            navigate('/NotFound')
+        }
+        else {
+            setProduct(filterProduct)
+        }
+    }, [id])
+
+    const filterProduct = productos.find( (product) => {
+        return product.id == id
+    })
 
     return (
         <>
