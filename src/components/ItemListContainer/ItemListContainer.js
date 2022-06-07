@@ -10,9 +10,9 @@ const ItemListContainer = ({title}) => {
     
     const getProducts = () => {
         return new Promise( (resolve, reject) => {
-            //setTimeout(() => {
+            setTimeout(() => {
                 resolve(productos)
-            //}, 2000)
+            }, 1000)
         })
     }
     

@@ -32,32 +32,32 @@ const ToolBar = () => {
                             <ul className='toolbar'>
                                 <li>
                                     <Button>
-                                        <Link to={`/`}>Inicio</Link>
+                                        <Link to={`/`} style={{ textDecoration: 'none' }}>Inicio</Link>
                                     </Button>
                                 </li>
                                 <li>
                                     <Button>
-                                        <Link to={`/products/televisores`}>Televisores</Link>
+                                        <Link to={`/products/televisores`} style={{ textDecoration: 'none' }}>Televisores</Link>
                                     </Button>
                                 </li>
                                 <li>
                                     <Button>
-                                        <Link to={`/products/computadoras`}>Computadoras</Link>
+                                        <Link to={`/products/computadoras`} style={{ textDecoration: 'none' }}>Computadoras</Link>
                                     </Button>
                                 </li>
                                 <li>
                                     <Button>
-                                        <Link to={`/products/celulares`}>Celulares</Link>
+                                        <Link to={`/products/celulares`} style={{ textDecoration: 'none' }}>Celulares</Link>
                                     </Button>
                                 </li>
                                 <li>
                                     <Button>
-                                        <Link to={`/products/consolas`}>Consolas</Link>
+                                        <Link to={`/products/consolas`} style={{ textDecoration: 'none' }}>Consolas</Link>
                                     </Button>
                                 </li>
                                 <li>
                                     <Button>
-                                        <Link to="/contact">Contacto</Link> 
+                                        <Link to="/contact" style={{ textDecoration: 'none' }}>Contacto</Link> 
                                     </Button>
                                 </li>
                             </ul>

@@ -10,28 +10,29 @@ const ItemDetailContainer = () => {
     const navigate = useNavigate()
     const [product, setProduct] = useState({})
     
-/*     const getItem = () => {
+    const getItem = () => {
         return new Promise( (resolve, reject) => {
             setTimeout(() => {
-                resolve(productos)
-            }, 2000)
+                resolve()
+            }, 1000)
         })
-    } */
+    }
 
     useEffect( () => {
-        /* getItem()
-        .then((response) => {
-            setProduct(response)
+         getItem()
+        .then(() => {
+            if(filterProduct === undefined){
+                navigate('/notFound')
+            } 
+            else {
+                console.log("FilterProduct: ",filterProduct)
+                setProduct(filterProduct)
+            }
         })
         .catch((err) => {
             console.log("Fallo la llamada de products" , err)
-        }) */
-        if(filterProduct === undefined){
-            navigate('/NotFound')
-        } 
-         else {
-            setProduct(filterProduct)
-         }
+        }) 
+        
     }, [id])
 
     const filterProduct = productos.find( (product) => {
@@ -41,7 +42,7 @@ const ItemDetailContainer = () => {
     return (
         <>
         {/* <div> Contenedor Item</div> */}
-        <ItemDetail info ={product} />
+        <ItemDetail data ={product} images = {product.image}/>
         </>
     )
 }

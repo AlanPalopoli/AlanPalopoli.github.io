@@ -20,35 +20,15 @@
 
 .itemDetailBrand{
     color:#5c75da;
-    text-align: left;
+    text-align: center;
 }
 
 .itemDetailTittle {
-    text-align: left;
+    text-align: center;
 }
 
 .itemDetailPrice{
     color:#5c75da;
-    text-align: left;
+    text-align: center;
 
-}
-
-.itemDetailCount {
-    width: 50%;
-    display: flex;
-    margin-bottom: 1em;
-}
-
-.itemDetailCount button {
-    height: 50%;
-    margin-top: 1em;
-}
-
-.itemDetailCount h3 {
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-.buttonBuyItemDetail button {
-    width: 100%;
 }

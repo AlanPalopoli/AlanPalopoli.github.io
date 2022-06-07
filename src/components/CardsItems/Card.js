@@ -4,24 +4,13 @@ import './Card.css';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom'
+import ItemCount from '../ItemCount/ItemCount';
 
 const Item = ({tittle, image, price, stock, id}) => {
-    const [countItem, setCount] = useState(1)
-
-    const addItem = () => {
-        if(countItem < stock){
-            setCount (countItem + 1)
-        }
-    }
-
-    const removeItem = () => {
-        if(countItem > 1){
-            setCount (countItem - 1)
-        }
-    }
+    const [showButton, setShowButton] = useState(false)
 
     return (
-        <Card sx={{ minWidth: 275 }} className='cardContainer'>
+        <Card sx={{ minWidth: 275, minHeight: 514 }} className='cardContainer'>
             <div className='card-item'>
                 <Typography sx={{ fontSize: 15 }} variant="overline" display="block" color="text.secondary" gutterBottom>
                 {tittle}
@@ -31,20 +20,19 @@ const Item = ({tittle, image, price, stock, id}) => {
                 <img src={`/img/${image}`} alt={"producto"}/> 
             </div>
             <div>
-                <Button variant={'contained'}>
-                    <Link to={`/product/${id}`}>Ver Producto</Link>
+                <Button variant={'text'}>
+                    <Link to={`/product/${id}`} style={{ textDecoration: 'none' }}>Ver Producto</Link>
                 </Button>
             </div>
             <div>
-                <h3>${price}</h3>
+                <h3>{price}</h3>
             </div>
-            <div className='countItem'>
-                <Button onClick={removeItem} variant="outlined" className='button-count' sx={{minWidth:'34px'}}>-</Button>
-                <p>{countItem}</p>
-                <Button onClick={addItem} variant="outlined" sx={{minWidth:'34px'}}>+</Button>
-            </div>
-            <div className='button-cart'>
-                <Button /* onClick={addItem} */ variant="outlined" >Agregar al carrito</Button>
+            <div>
+            {!showButton ?
+                <ItemCount stock ={stock} setShowButton={setShowButton} />
+                :
+                <Button  variant="outlined"> <Link to={'/cart'} style={{ textDecoration: 'none' }}>Finalizar compra</Link></Button>
+                }
             </div>
         </Card>
     )
