@@ -1,18 +1,26 @@
 .countItem p {
     font-size: 18px;
+    justify-content: center;
 }
 
 .card-item {
+    display: flex;
     margin-top: 5px;
     border-bottom: 1px solid #ccc;
+    justify-content: center;
 }
 
 .cardContainer {
-    margin-left: 1em;
+    margin-left: 3em;
     margin-right: 1em;
     border: 1px solid #ccc;
 }
 
+/* .cardContainer > .MuiCardContent-root {
+    padding-bottom: 15px !important;
+}
+ */
+ 
 .button-count {
     display: flex;
 }
@@ -23,5 +31,9 @@
 
 .card-item-img  img{
     height: 230px;
+}
+
+.cardDiv {
+    padding-top: 1em;
 }
 

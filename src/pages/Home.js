@@ -1,7 +1,7 @@
 import ItemList from "../components/ItemList/ItemList"
 import { useEffect, useState } from "react"
 import productos from "../utils/productsMocks"
-import Typography from '@mui/material/Typography';
+
 
 const Home = () => {
     const [products, setProducts] = useState([])
@@ -23,7 +23,7 @@ const Home = () => {
 
     return(
         <div className='general-container'>
-            <Typography variant="overline" component="div" sx={{fontSize: 15, flexGrow: 1 , marginTop: 2, textAlign:'left', marginLeft: 2, paddingTop:4}}>Productos Destacados</Typography>
+            <ItemList title={'Productos Destacados'} products={products}/>
             <ItemList title={'Productos Recomendados'} products={products}/>
         </div>
     )

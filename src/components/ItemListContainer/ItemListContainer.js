@@ -41,8 +41,8 @@ const ItemListContainer = ({title}) => {
 
     return (
         <div>
-        <Typography variant="overline" component="div" sx={{fontSize: 15, flexGrow: 1 , marginTop: 2, textAlign:'left', marginLeft: 2, paddingTop:4}}>{title}</Typography>
-        <ItemList  products={products} />
+            {/* <Typography variant="overline" component="div" sx={{fontSize: 30, flexGrow: 1 , marginTop: 2, textAlign:'center', marginLeft: 2, paddingTop:4}}>{title}</Typography> */}
+            <ItemList  products={products} />
         </div>
     )
 }

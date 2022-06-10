@@ -55,18 +55,77 @@ const productos = [
         description: 'PlayStation 5 240gb 120 RAM 200hz SM-A344hnqwO',
         category: 'consolas',
         stock: 10
-    }
+    },
+    {
+        id: '5',
+        tittle : 'Televisor Samsung 4k',
+        brand : 'Samsung',
+        price : '$140.000',
+        image: 'TvSamsung4k.png',
+        image2: 'TvSamsung4k.png',
+        image3: 'TvSamsung4k.png',
+        image4: 'TvSamsung4k.png',
+        image5:'TvSamsung4k.png',
+        description: 'TV Samsung 4k HD 1440 3D SM-A344hnqwO',
+        category: 'televisores',
+        stock: 2
+    },
+    {
+        id: '6',
+        tittle : 'Televisor Samsung 4k',
+        brand : 'Samsung',
+        price : '$140.000',
+        image: 'TvSamsung4k.png',
+        image2: 'TvSamsung4k.png',
+        image3: 'TvSamsung4k.png',
+        image4: 'TvSamsung4k.png',
+        image5:'TvSamsung4k.png',
+        description: 'TV Samsung 4k HD 1440 3D SM-A344hnqwO',
+        category: 'televisores',
+        stock: 2
+    },
+    {
+        id: '7',
+        tittle : 'Televisor Samsung 4k',
+        brand : 'Samsung',
+        price : '$140.000',
+        image: 'TvSamsung4k.png',
+        image2: 'TvSamsung4k.png',
+        image3: 'TvSamsung4k.png',
+        image4: 'TvSamsung4k.png',
+        image5:'TvSamsung4k.png',
+        description: 'TV Samsung 4k HD 1440 3D SM-A344hnqwO',
+        category: 'televisores',
+        stock: 2
+    },
+    {
+        id: '8',
+        tittle : 'Televisor Samsung 4k',
+        brand : 'Samsung',
+        price : '$140.000',
+        image: 'TvSamsung4k.png',
+        image2: 'TvSamsung4k.png',
+        image3: 'TvSamsung4k.png',
+        image4: 'TvSamsung4k.png',
+        image5:'TvSamsung4k.png',
+        description: 'TV Samsung 4k HD 1440 3D SM-A344hnqwO',
+        category: 'televisores',
+        stock: 2
+    },
+    {
+        id: '9',
+        tittle : 'Televisor Samsung 4k',
+        brand : 'Samsung',
+        price : '$140.000',
+        image: 'TvSamsung4k.png',
+        image2: 'TvSamsung4k.png',
+        image3: 'TvSamsung4k.png',
+        image4: 'TvSamsung4k.png',
+        image5:'TvSamsung4k.png',
+        description: 'TV Samsung 4k HD 1440 3D SM-A344hnqwO',
+        category: 'televisores',
+        stock: 2
+    },
 ]
 
-/* const producto = {
-    tittle : 'Iphone 7',
-    brand : 'Apple',
-    price : '$240.000',
-    image: 'iphone13Detail1.png',
-    description: 'Celular Iphone 7 4g 128gb Ram 200hz SM-A344hnqwO',
-    stock: 4,
-    id: 1
-}
- */
 export default productos
-/* export {producto} */
