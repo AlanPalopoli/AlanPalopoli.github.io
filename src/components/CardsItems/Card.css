@@ -4,17 +4,34 @@
 }
 
 .card-item {
-    display: flex;
+    display: inline;
     margin-top: 5px;
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
     justify-content: center;
 }
+.card-item  h3{
+    margin-top: -15px;
+}
+.card-item  h6{
+    margin-top: -15px;
+    text-align: center;
+}
 
-.cardContainer {
+.card-item-container {
     margin-left: 3em;
     margin-right: 1em;
     border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
+.show-product-button {
+    margin-top : -15px
+}
+.add-product-button {
+    margin-top : -15px
+}
+
 
 /* .cardContainer > .MuiCardContent-root {
     padding-bottom: 15px !important;
@@ -26,14 +43,19 @@
 }
 
 .button-cart {
-    margin-bottom: 1em;
+    margin-top: -15px;
 }
 
 .card-item-img  img{
-    height: 230px;
+    height: 224px; 
+    width: 224;
+    max-width: 224px;
 }
 
-.cardDiv {
-    padding-top: 1em;
+.card-item-container > .MuiCardContent-root {
+    padding-bottom: 15px !important;
 }
+/* .cardDiv {
+    padding-top: 1em;
+} */
 

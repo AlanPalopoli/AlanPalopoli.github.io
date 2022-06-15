@@ -8,6 +8,7 @@ import ProductList from './pages/ProductList';
 import Contacto from './pages/Contact';
 import Detalle from './pages/Detalle';
 import NotFound from './pages/NotFound';
+import Cart from './pages/Cart'
 import { CartProvider } from './context/CartContext';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path='/contact' element={<Contacto />}/>  
             <Route path='/product/:id' element={ <Detalle />}/>
             <Route path='/products/:category' element={<ProductList />}/>
+            <Route path='/cart' element={<Cart />}/>
             <Route path='*' element={<NotFound />}/>  
           </Routes>
         </BrowserRouter>

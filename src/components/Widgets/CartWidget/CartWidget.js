@@ -4,9 +4,10 @@ import Menu from '@mui/material/Menu';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CartContext from '../../../context/CartContext'
 import { useState, useContext } from 'react';
+import './CartWidget.css';
 
 const CartWidget = () => {
-    const { cartListItems } = useContext(CartContext)
+    const { cartListItems, totalPrice } = useContext(CartContext)
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -43,14 +44,16 @@ const CartWidget = () => {
                     {cartListItems.map( (item) => {
                         return(
                         <div className='item-cart-prod' key={item.id}>
-                            <div className='cart-prod__image'>
+                            <div className='cart-prod-image'>
                                 <img src={`/img/${item.image}`} alt="prod carrito" />
                             </div>
-                            <div className='cart-prod__info'>
-                                <p>{item.title}</p>
-                                <span>$ {item.price}</span>
+                            <div className='cart-prod-info'>
+                                <span>{item.title}</span>
+                                <span>${item.price}</span>
+                                <span>Cantidad: {item.countItem}</span>
+                                {/* <span>Precio Total: {`${totalPrice * item.countItem}`}</span> */}
                             </div>
-                            <div className='cart-prod__action'>
+                            <div className='cart-icon-delete'>
                                 <button>
                                     <DeleteIcon />
                                 </button>
