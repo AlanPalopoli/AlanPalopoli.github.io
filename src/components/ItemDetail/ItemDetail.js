@@ -96,9 +96,9 @@ const ItemDetail = ({data, images}) => {
                                 </div>
                                 <div>
                                     {!showButton ?
-                                    <ItemCount title = {data.tittle} image = {data.image} price = {data.price} id = {data.id} stock ={data.stock} setShowButton={setShowButton} />
+                                    <ItemCount title = {data.tittle} image = {data.image} price = {data.price} id = {data.id} stock ={data.stock} description = {data.description} setShowButton={setShowButton} />
                                     :
-                                    <Button  variant="outlined"> <Link to={'/cart'} style={{ textDecoration: 'none' }} >Finalizar compra</Link></Button>
+                                    <Button  variant="text"> <Link to={'/cart'}style={{ textDecoration: 'none', backgroundColor: 'black', color: 'white', borderRadius: 20, border: 5,  fontFamily: 'system-ui', fontSize: 14, paddingRight: 10, paddingLeft: 10 }} >Finalizar compra</Link></Button>
                                     }
 
                                 </div>

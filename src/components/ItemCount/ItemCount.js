@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import './ItemCount.css';
 import CartContext from '../../context/CartContext'
 
-const ItemCount = ({ image, title, price, stock, id, setShowButton}) => {
+const ItemCount = ({ image, title, price, stock, id,  description, setShowButton}) => {
 
     const [countItem, setCount] = useState(1)
     const { addProductToCart } = useContext(CartContext)
@@ -27,7 +27,7 @@ const ItemCount = ({ image, title, price, stock, id, setShowButton}) => {
                 <Button onClick={addItem} variant="outlined" sx={{minWidth:'34px'}}>+</Button>
             </div>
             <div className='button-cart'>
-                <Button  onClick={() => (addProductToCart({ image, title, price, stock, id, countItem}), setShowButton(true)) }  variant="text" >Agregar al carrito</Button>
+                <Button  onClick={() => (addProductToCart({ image, title, price, stock, id, countItem,  description}), setShowButton(true)) }  variant="text" >Agregar al carrito</Button>
             </div>
         </div>
     )

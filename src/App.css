@@ -18,6 +18,24 @@
   margin: 0 auto;
 }
 
+.container-item-list-cart{
+  margin-top: 1em;
+}
+
+.table-body-container {
+  border: 1px solid #ccc;
+}
+
+.cart-footer {
+  text-align: right;
+  margin-right: 3em;
+  font-size: 20px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: 500;
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

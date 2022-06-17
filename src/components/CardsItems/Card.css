@@ -26,26 +26,21 @@
     position: relative;
 }
 .show-product-button {
+    padding-bottom: 1em;
     margin-top : -15px
+    
 }
 .add-product-button {
     margin-top : -15px
 }
-
-
-/* .cardContainer > .MuiCardContent-root {
-    padding-bottom: 15px !important;
-}
- */
  
 .button-count {
     display: flex;
 }
 
 .button-cart {
-    margin-top: -15px;
+    margin-top: -20px;
 }
-
 .card-item-img  img{
     height: 224px; 
     width: 224;

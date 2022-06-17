@@ -32,9 +32,9 @@ const Item = ({tittle, image, price, stock, id, description}) => {
                     </div>
                     <div className='add-product-button'>
                     {!showButton ?
-                        <ItemCount title = {tittle} image = {image} price = {price} id = {id} stock ={stock} setShowButton={setShowButton} />
+                        <ItemCount title = {tittle} image = {image} price = {price} id = {id} stock ={stock} description = {description} setShowButton={setShowButton} />
                         :
-                        <Button  variant="outlined"> <Link to={'/cart'} style={{ textDecoration: 'none' }}>Finalizar Compra</Link></Button>
+                        <Button  variant="text"> <Link to={'/cart'} style={{ textDecoration: 'none', backgroundColor: 'black', color: 'white', borderRadius: 20, border: 5, fontFamily: 'system-ui',  fontSize: 14, paddingRight: 10, paddingLeft: 10 }}>Finalizar Compra</Link></Button>
                         }
                     </div>
                 </div>
