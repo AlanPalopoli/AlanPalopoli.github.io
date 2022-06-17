@@ -9,13 +9,13 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 
-const ItemList = ({ title ,products}) => {
+const ItemList = ({ title ,products, category}) => {
 
     return (
         <div>
-            <Typography variant="overline" component="div" sx={{fontSize: 16, flexGrow: 1 , marginTop: 2, textAlign:'left', marginLeft: 6, paddingTop:4}}>{title}</Typography>
+            <Typography variant="overline" component="div" sx={{fontSize: 16, flexGrow: 1 , marginTop: 2, textAlign:'center', marginLeft: 6, paddingTop:4}}>{title}</Typography>
             <Grid container spacing={0}>
-            <Swiper
+            {!category ? (<Swiper
                 spaceBetween={0}
                 slidesPerView={4}
                 onSlideChange={() => console.log('slide change')}
@@ -31,7 +31,8 @@ const ItemList = ({ title ,products}) => {
                         )
                     })
                 }  
-            </Swiper> 
+            </Swiper>
+            ): <div className='card-item-container-category'>{products.map(  ({tittle, price, image, stock, id, description}) => <Card tittle = {tittle} price= {price} image = {image} stock= {stock} id = {id} description = {description}/>)}</div>}
             </Grid>
         </div>
     )

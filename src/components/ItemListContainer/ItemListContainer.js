@@ -1,7 +1,5 @@
 import ItemList from '../ItemList/ItemList.js';
 import { useState, useEffect } from 'react';
-import Typography from '@mui/material/Typography';
-//import productos from '../../utils/productsMocks.js';
 import { useParams } from 'react-router-dom'
 import db from '../../utils/firebaseConfig';
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -20,16 +18,6 @@ const ItemListContainer = ({title}) => {
         })
         return productList
     }
-    
-    useEffect( () => {
-        setProducts([])
-        console.log()
-        getProducts()
-        .then( (productos) => {
-            // console.log("productos: ", productos)
-            category ?  filterFirebase() : setProducts(productos)
-        })
-    }, [category])
 
     const filterFirebase = async () => {
         const productRef = collection(db, 'productos')
@@ -42,8 +30,16 @@ const ItemListContainer = ({title}) => {
         })
         return setProducts(productList)
     }
+    
+    useEffect( () => {
+        setProducts([])
+        getProducts()
+        .then( (productos) => {
+            category ?  filterFirebase() : setProducts(productos)
+        })
+    }, [category])
 
-
+   
 /*     const filterProducts = (arrayProducts) => {
         return arrayProducts.map((product) => { 
             if(product.category == category){
@@ -56,7 +52,7 @@ const ItemListContainer = ({title}) => {
     return (
         <div>
             {/* <Typography variant="overline" component="div" sx={{fontSize: 30, flexGrow: 1 , marginTop: 2, textAlign:'center', marginLeft: 2, paddingTop:4}}>{title}</Typography> */}
-            <ItemList  products={products} />
+            <ItemList title={title} products={products} category ={category} />
         </div>
     )
 }

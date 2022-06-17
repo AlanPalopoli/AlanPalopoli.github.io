@@ -1,4 +1,4 @@
-/* const productos = [
+/*  const productos = [
     {
         id: '1',
         tittle : 'Iphone 7',
@@ -129,4 +129,4 @@
     },
 ]
 
-export default productos */
+export default productos  */

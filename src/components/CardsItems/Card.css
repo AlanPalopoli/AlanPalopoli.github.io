@@ -25,6 +25,13 @@
     flex-direction: column;
     position: relative;
 }
+
+.card-item-container-category {
+    margin-left: 3em;
+    margin-right: 1em;
+    display: flex;
+    position: relative;
+}
 .show-product-button {
     padding-bottom: 1em;
     margin-top : -15px
