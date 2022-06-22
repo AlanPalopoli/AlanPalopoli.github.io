@@ -1,0 +1,33 @@
+.form-contact-submit {
+    display: flex;
+    flex-direction: column;
+}
+
+form.form-contact-submit div {margin-bottom: 5px;}
+
+form.form-contact-submit button {
+    background-color: black;
+    color: white;
+    border-radius: 1em;
+    font-family: 'system-ui';
+    font-size: 14px;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.order-success-text {
+    margin-top: -2em;
+}
+.order-success-form {
+    text-align: center;
+}
+.order-success-form button{
+    background-color: black;
+    color: white;
+    border-radius: 1em;
+    font-family: 'system-ui';
+    font-size: 14px;
+    padding-right: 1em;
+    padding-left: 1em;
+
+}

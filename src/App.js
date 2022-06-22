@@ -8,7 +8,7 @@ import ProductList from './pages/ProductList';
 import Contacto from './pages/Contact';
 import Detalle from './pages/Detalle';
 import NotFound from './pages/NotFound';
-import Cart from './pages/Cart'
+import Cart from './pages/Cart/Cart'
 import { CartProvider } from './context/CartContext';
 
 function App() {
