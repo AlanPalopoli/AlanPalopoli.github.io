@@ -17,21 +17,24 @@
     text-align: center;
 }
 
+
 .card-item-container {
     margin-left: 3em;
     margin-right: 1em;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; 
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-.card-item-container-category {
+.card-item-container-default {
     margin-left: 3em;
-    margin-right: 1em;
+    margin-right: 1em; 
     display: flex;
+    flex-direction: column;
     position: relative;
 }
+
 .show-product-button {
     padding-bottom: 1em;
     margin-top : -15px

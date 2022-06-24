@@ -1,0 +1,6 @@
+.card-item-container-category {
+    display: flex;
+    position: relative;
+    width: 1300px;
+    margin: 0 auto;
+}

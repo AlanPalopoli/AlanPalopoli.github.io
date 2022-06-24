@@ -3,6 +3,7 @@ import { Grid } from '@mui/material';
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Typography from '@mui/material/Typography';
+import './ItemList.css'
 
 import "swiper/css";
 import "swiper/css/pagination";

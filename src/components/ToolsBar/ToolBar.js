@@ -1,10 +1,12 @@
 import './ToolBar.css';
+import { Button, TextField } from "@mui/material"
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import { createTheme , ThemeProvider } from '@mui/material/styles';
-import { Button} from '@mui/material';
 import { Link } from 'react-router-dom'
+import Drawer from '../../components/ToolsBar/Drawer/Drawer'
 
 const toolbarStyle = {
     minHeight: '30px',
@@ -23,13 +25,16 @@ const theme = createTheme({
   });
 
 const ToolBar = () => {
+    
+
     return (
         <ThemeProvider theme={theme}>
             <div>
                 <Box sx={{ flexGrow: 1 }}>
                     <AppBar position="static" color='primary'>
-                        <Toolbar style={toolbarStyle}>
-                            <ul className='toolbar'>
+                        <Toolbar style={toolbarStyle}  className="toolbar-style">
+                            <Drawer/>
+                            {/* <ul className='toolbar'>
                                 <li>
                                     <Button>
                                         <Link to={`/`} style={{ textDecoration: 'none' }}>Inicio</Link>
@@ -60,8 +65,7 @@ const ToolBar = () => {
                                         <Link to="/contact" style={{ textDecoration: 'none' }}>Contacto</Link> 
                                     </Button>
                                 </li>
-                            </ul>
-                            
+                            </ul> */}
                         </Toolbar>
                     </AppBar>
                 </Box>

@@ -2,6 +2,11 @@
     width: 100%;
 }
 
+.navbar-toolbar{
+    width: 1300px;
+    margin: 0 auto;
+}
+
 .imgTitulo{
     justify-content: center;
     width: 400px;

@@ -24,7 +24,7 @@ const NavBar = () => {
             <div className="navbar">
                 <Box sx={{ flexGrow: 1 }}>
                     <AppBar position="static" color='primary'>
-                        <Toolbar>
+                        <Toolbar className='navbar-toolbar'>
                             <LogoWidget/>
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 , marginTop: 2}}>
                             <img 

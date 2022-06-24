@@ -1,0 +1,10 @@
+.container-drawer button {
+    font-weight: 500;
+    font-size: 17px;
+    font-family: "system-ui";
+}
+
+.dehaze-icon {
+    font-size: 25px;
+    padding-right: 5px;
+}

@@ -36,5 +36,10 @@
 .container-product-mini button{
     height: 100px;
     width: 81px;
+    margin-top: 3px;
+}
 
+.item-detail-grid-container {
+    width: 1300px;
+    margin: 0 auto;
 }

@@ -1,7 +1,7 @@
 import './ItemDetail.css';
 import { Box, Grid } from '@mui/material';
 import { Link } from 'react-router-dom'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import ItemCount from '../ItemCount/ItemCount';
 import ButtonGroup from '@mui/material/ButtonGroup';
@@ -9,76 +9,60 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 const ItemDetail = ({data, images}) => {
     const [showButton, setShowButton] = useState(false)
     const [showImage, setShowImage] = useState()
+    const [arrayImage, setArrayImage] = useState()
+
+
+    const getImage = ()  => {
+        return new Promise( (resolve, reject) => {
+            setTimeout(() => {
+                if(data.image != undefined) {
+                    resolve(
+                        data.image.map( (item, index) => {  
+                            return (
+                                <ButtonGroup
+                                    orientation="vertical"
+                                    aria-label="vertical outlined button group"
+                                    key={index}
+                                >
+                                    <Button onClick={() => setShowImage(item)}>
+                                        <img src={`/img/${item}`} alt="Imagen Producto" className="imgProductoDetailMini"/>
+                                    </Button>
+                                </ButtonGroup>
+                            )
+                        }),
+                        setShowImage(data.image[0])
+                )
+            }
+            }, 1000)
+        })
+    }
+
+    useEffect( () => {
+        getImage()
+       .then((img) => {
+        setArrayImage(img)
+       })
+       .catch((err) => {
+           console.log("Fallo la llamada de products" , err)
+       }) 
+       
+   }, [data])
     
     return (
         <div> 
             <section className='sectionItemDetail'>
                 <Grid container>
-                    <Grid item md={2}></Grid>
-                    <Grid item md={8}>
+                    {/* <Grid item md={2}></Grid> */}
+                    <Grid className="item-detail-grid-container">
                         <Grid container spacing={1}>
-                            {/* <h1>{info.tittle}</h1> */}
                             <Grid item md ={2} className='container-product-mini'>
-                                <Box sx={{width: 98, height: 98, marginBottom: 1}} > 
-                                    <ButtonGroup
-                                        orientation="vertical"
-                                        aria-label="vertical outlined button group"
-                                    >
-                                        <Button onClick={() => setShowImage(data.image)}>
-                                            <img src={`/img/${data.image}`} alt="Imagen Producto" className="imgProductoDetailMini"/>
-                                        </Button>
-                                    </ButtonGroup>
-                                </Box>
-                                <Box sx={{width: 98, height: 98, marginBottom: 1}} > 
-                                    <ButtonGroup
-                                        orientation="vertical"
-                                        aria-label="vertical outlined button group"
-                                    >
-                                        <Button onClick={() => setShowImage(data.image2)}>
-                                            <img src={`/img/${data.image2}`} alt="Imagen Producto" className="imgProductoDetailMini"/>
-                                        </Button>
-                                    </ButtonGroup>
-                                </Box>
-                                <Box sx={{width: 98, height: 98, marginBottom: 1}} > 
-                                    <ButtonGroup
-                                        orientation="vertical"
-                                        aria-label="vertical outlined button group"
-                                    >
-                                        <Button onClick={() => setShowImage(data.image3)}>
-                                            <img src={`/img/${data.image3}`} alt="Imagen Producto" className="imgProductoDetailMini"/>
-                                        </Button>
-                                    </ButtonGroup>
-                                </Box>
-                                <Box sx={{width: 98, height: 98, marginBottom: 1}} > 
-                                    <ButtonGroup
-                                        orientation="vertical"
-                                        aria-label="vertical outlined button group"
-                                    >
-                                        <Button onClick={() => setShowImage(data.image4)}>
-                                            <img src={`/img/${data.image4}`} alt="Imagen Producto" className="imgProductoDetailMini"/>
-                                        </Button>
-                                    </ButtonGroup>
-                                </Box>
-                                <Box sx={{width: 98, height: 98, marginBottom: 1}} > 
-                                    <ButtonGroup
-                                        orientation="vertical"
-                                        aria-label="vertical outlined button group"
-                                    >
-                                        <Button onClick={() => setShowImage(data.image5)}>
-                                            <img src={`/img/${data.image5}`} alt="Imagen Producto" className="imgProductoDetailMini"/>
-                                        </Button>
-                                    </ButtonGroup>
+                                <Box sx={{width: 98, height: 98, marginBottom: 1}} >
+                                    {arrayImage}
                                 </Box>
                             </Grid>
                             <Grid item md={6}>
                                 <div>
-                                    {/* <img src={`/img/${data.image}`} alt="Imagen Producto" className="imgProductoDetail1"/>  */}
-                                    {showImage ?
-                                        <img src={`/img/${showImage}`} alt="Imagen Producto" className="imgProductoDetail1"/>
-                                        :
-                                        <img src={`/img/${data.image}`} alt="Imagen Producto" className="imgProductoDetail1"/>
-                                    }
-                                                  
+                                    <img src={`/img/${showImage}`} alt="Imagen Producto" className="imgProductoDetail1"/>
                                 </div>
                             </Grid>
                             <Grid item md={4}>
@@ -88,7 +72,7 @@ const ItemDetail = ({data, images}) => {
                                     </h2>
                                 </div>
                                 <div className='itemDetailTittle'>
-                                    {/* <h2>{info.tittle}</h2> */}
+                                    {/* <h2>{data.tittle}</h2> */}
                                     <h2>{data.description}</h2>
                                 </div>
                                 <div className='itemDetailPrice'>
@@ -106,7 +90,7 @@ const ItemDetail = ({data, images}) => {
                             
                         </Grid>
                     </Grid>
-                    <Grid item md={2}></Grid>
+                    {/* <Grid item md={2}></Grid> */}
                 </Grid>
             </section>
         </div>
