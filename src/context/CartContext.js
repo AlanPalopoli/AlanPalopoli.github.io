@@ -16,13 +16,8 @@ const CartProvider = ({children}) => {
     }
 
     const deleteProductToCart = (product) => {
-        let isInCart = cartListItems.find(cartItem => cartItem.id === product.id)
-        if(isInCart) {
-            console.log("cartListItems:", cartListItems)
-            console.log("product.title", product.id)
-            cartListItems.splice(cartListItems.indexOf(product.title), 1)
-        }
-        console.log("El producto no se encuentra en el carrito")
+        setCartListItems (cartListItems.filter(cartItem => cartItem.id !== product.id))
+        setTotalPrice(totalPrice - product.price)
     }
 
     const info = {

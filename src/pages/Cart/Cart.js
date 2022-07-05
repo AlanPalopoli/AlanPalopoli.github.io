@@ -93,7 +93,7 @@ const Cart = () => {
                                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                             >
                                                 <TableCell component="th" scope="row">
-                                                    <img src={`/img/${item.image}`} alt="prod carrito" style={{width : '15%'}} />
+                                                    <img src={`/img/${item.image[0]}`} alt="prod carrito" style={{ height: '130px'}} />
                                                 </TableCell>
                                                 <TableCell align="right">{item.title}</TableCell>
                                                 <TableCell align="right">{item.description}</TableCell>

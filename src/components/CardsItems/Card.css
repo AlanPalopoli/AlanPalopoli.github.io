@@ -19,17 +19,9 @@
 
 
 .card-item-container {
-    margin-left: 3em;
+    margin-left: 3em; 
     margin-right: 1em;
-    border: 1px solid #ccc; 
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.card-item-container-default {
-    margin-left: 3em;
-    margin-right: 1em; 
+/*     border: 1px solid #ccc;  */
     display: flex;
     flex-direction: column;
     position: relative;

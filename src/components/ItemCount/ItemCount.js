@@ -20,7 +20,7 @@ const ItemCount = ({ image, title, price, stock, id,  description, setShowButton
         }
     }
     return (
-        <div>
+        <div style={{textAlign:'center'}}>
             <div className='countItem'>
                 <Button onClick={removeItem} variant="outlined" className='button-count' sx={{minWidth:'34px'}}>-</Button>
                 <p>{countItem}</p>

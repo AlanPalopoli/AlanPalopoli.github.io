@@ -7,7 +7,7 @@
 .item-cart-prod {
     float: left;
     width: 355px;
-    border: 1px solid grey;
+    border-bottom: 1px solid #ccc;
     padding: 10px;
     display: flex;
     justify-content: space-around;
@@ -33,6 +33,20 @@
     padding-right: 1em;
     padding-left: 1em;
     margin-top: -5px;
+}
+
+.cart-title {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+
+.cart-widget-footer {
+    padding-left: 1em;
+}
+
+.cart-footer-price {
+    margin-top: -1em;
 }
 
 .cart-prod__action button {background: none;border: none;}

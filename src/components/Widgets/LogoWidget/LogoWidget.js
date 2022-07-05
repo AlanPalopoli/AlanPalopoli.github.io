@@ -8,7 +8,7 @@ const LogoWidget = () => {
                 <Link to={'/'}>
                     <img 
                     className='imgLogo' 
-                    src="img/LogoRobot.png" 
+                    src="img/Logo2.png" 
                     alt={"Foto Robot"}
                     />
                 </Link>

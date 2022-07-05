@@ -1,13 +1,9 @@
 .toolbar {
     width: 100%;
     display: flex;
-    
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc; 
 }
-.toolbar li {
-    margin-right: 10px;
-    list-style-type: none;
-}
-
 .toolbar button {
     font-size: 16px;
     color: black;
@@ -21,4 +17,18 @@
 .toolbar-style button {
     font-size: 16px;
     color: black;
+}
+
+.div-search-toolbar {
+    width: 25em;
+    padding-top: 2px;
+    margin-top: 10px;
+}
+
+.div-drawer {
+    margin-top: 15px;
+}
+
+.div-button-ofertas {
+    margin-top: 16px;
 }

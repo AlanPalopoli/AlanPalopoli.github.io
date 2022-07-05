@@ -3,11 +3,12 @@
 }
 
 .navbar-toolbar{
+    border-bottom: 1px solid #ccc; 
     width: 1300px;
     margin: 0 auto;
 }
 
 .imgTitulo{
     justify-content: center;
-    width: 400px;
+    width: 50%;
 }
