@@ -11,6 +11,7 @@ import Drawer from '../../components/ToolsBar/Drawer/Drawer';
 import Paper from '@mui/material/Paper';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
+import { useNavigate } from 'react-router-dom';
 
 const toolbarStyle = {
     minHeight: '30px',
@@ -31,35 +32,41 @@ const theme = createTheme({
     }
   });
 
-
- 
-  
-  const CustomizedInputBase = () => {
-    return (
-      <Paper
-        component="form"
-        sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400, backgroundColor: 'floralwhite'}}
-        elevation={0}
-      >
-        <InputBase
-          sx={{ ml: 1, flex: 1 }}
-          placeholder="Buscar productos, marcas y más..."
-          inputProps={{ 'aria-label': 'Buscar productos, marcas y más...' }}
-        />
-        <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
-          <SearchIcon />
-        </IconButton>
-      </Paper>
-    );
-  }
-
 const ToolbarChildren = () => {
     const [textSearch, setTextSearch] = useState('');
+    let navigate = useNavigate();
+
+    const CustomizedInputBase = () => {
+      return (
+        <Paper
+          component="form"
+          sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400, backgroundColor: 'floralwhite'}}
+          elevation={0}
+        >
+          <InputBase
+            sx={{ ml: 1, flex: 1 }}
+            placeholder="Buscar productos, marcas y más..."
+            inputProps={{ 'aria-label': 'Buscar productos, marcas y más...' }}
+            onChange={handleChange}
+          />
+          <IconButton type="submit" sx={{ p: '10px' }} aria-label="search" onClick={handleSubmit}>
+            <SearchIcon />
+          </IconButton>
+        </Paper>
+      );
+    }
+  
 
 
     const handleChange = (e) => {
         setTextSearch(e.target.value)
     }
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      navigate(`/search/${textSearch}`, { replace: true });
+  }
+
 
     return (
         <ThemeProvider theme={theme}>

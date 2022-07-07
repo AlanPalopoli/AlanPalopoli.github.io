@@ -2,29 +2,14 @@ import { useState , useContext  } from 'react';
 import Button from '@mui/material/Button';
 import './ItemCount.css';
 import CartContext from '../../context/CartContext'
-import Toastify from '../Toastify/Toastify'
-import Snackbar from '@mui/material/Snackbar';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ItemCount = ({ image, title, price, stock, id,  description, color, storage, colorPick, storagePick,  setShowButton}) => {
 
     const [countItem, setCount] = useState(1)
     const { addProductToCart } = useContext(CartContext)
-    const [showToastify, setShowToastify] = useState()
-    const [open, setOpen] = useState(false);
-
-    const handleClick = () => {
-        setOpen(true);
-    };
-
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-        return;
-        }
-
-        setOpen(false);
-    };
 
     const getToastify = ()  => {
         return (
@@ -34,11 +19,17 @@ const ItemCount = ({ image, title, price, stock, id,  description, color, storag
             (color || storage) && (!colorPick  || !storagePick) ?
             (
             <>
-            {openSnackBar()}
-            {console.log("entro aca")}
-            
-            
-            {/* <Toastify typeError={"Ingrese todas las opciones para agregar el producto"}/> */}
+            {
+                toast.error('Ingrese todas las opciones para agregar el producto', {
+                position: "bottom-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                })
+            }
             </>
             )
             :
@@ -46,19 +37,6 @@ const ItemCount = ({ image, title, price, stock, id,  description, color, storag
         )
     }
 
-    const openSnackBar = () => {
-        return (
-            <div>
-            {handleClick}
-            <Snackbar
-                open={open}
-                autoHideDuration={6000}
-                onClose={handleClose}
-                message="Note archived"
-            />
-            </div>
-        )
-    }
     
     const addItem = () => {
         if(countItem < stock){
@@ -82,6 +60,7 @@ const ItemCount = ({ image, title, price, stock, id,  description, color, storag
             <div className='button-cart'>
                 <Button  onClick={() => (getToastify())} variant="text"> Agregar al carrito </Button>
             </div>
+            <ToastContainer />
         </div>
     )
 }

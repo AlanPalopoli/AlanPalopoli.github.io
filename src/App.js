@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import ProductList from './pages/ProductList';
 import Detalle from './pages/Detalle';
 import NotFound from './pages/NotFound';
+import Buscador from './pages/Buscador';
 import Cart from './pages/Cart/Cart'
 import Ofertas from './pages/Ofertas';
 import LogIn from './pages/LogIn';
@@ -33,6 +34,7 @@ function App() {
                 <Route path='/products/:category' element={<ProductList />}/>
                 <Route path='/cart' element={<Cart />}/>
                 <Route path='/ofertas' element={<Ofertas />}/>
+                <Route path='/search/:filter' element={<Buscador />}/>  
                 <Route path='*' element={<NotFound />}/>  
               </Route>
               <Route path='/login' element={<LogIn />}/>
