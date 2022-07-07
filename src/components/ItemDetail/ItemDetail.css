@@ -31,14 +31,10 @@
     margin-top: 2em;
 }
 
-.itemDetailBrand{
-    text-align: left;
-}
-
 .itemDetailTittle {
     font-size: 1.429rem;
     text-align: left;
-    font-family: Montserrat,sans-serif;
+    font-family: sans-serif;
     font-weight: 700;
     color: #444444;
     line-height: 1.1;
@@ -47,13 +43,18 @@
 .itemDetailPrice{
     text-align: left;
     color: #ff6000;
+    font-family: sans-serif;
     font-size: 42px;
     font-weight: 700;
     line-height: 20px;
     margin-top: 15px;
 
 }
-
+.itemDetailDues {
+    padding-top: 1em;
+    display: flex;
+    font-family: sans-serif;
+}
 .container-product-mini button{
     height: 100px;
     width: 81px;
@@ -81,4 +82,12 @@
 
 .div-stock-detail {
     text-align: center;
+}
+
+.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {
+    font-size: 12px;
+}
+
+.border-bottom-line {
+    padding-top: 1em;
 }

@@ -75,7 +75,7 @@ const ToolbarChildren = () => {
                                   {CustomizedInputBase()}
                                 </div>
                                 <div className='div-button-ofertas'>
-                                  <Button> Ofertas Top</Button>
+                                  <Button><Link to={'/ofertas'} style={{ textDecoration: 'none',  color:"inherit" }}>  Ofertas Top </Link></Button>
                                 </div>
                             </div>
                         </Toolbar>

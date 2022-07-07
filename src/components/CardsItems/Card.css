@@ -1,36 +1,55 @@
-.countItem p {
-    font-size: 18px;
-    justify-content: center;
-}
-
-.card-item {
+.card-description-item {
     display: inline;
     margin-top: 5px;
-    /* border-bottom: 1px solid #ccc; */
     justify-content: center;
 }
-.card-item  h3{
+.card-description-item  h3{
     margin-top: -15px;
 }
-.card-item  h6{
+.card-description-item  h6{
     margin-top: -15px;
     text-align: center;
 }
 
-
 .card-item-container {
     margin-left: 3em; 
     margin-right: 1em;
-/*     border: 1px solid #ccc;  */
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc; 
 }
 
-.show-product-button {
-    padding-bottom: 1em;
-    margin-top : -15px
-    
+.cardDiv:not(:hover) .card_div_button{
+    transition: all .2s ease-out;
+    display: block;
+    width: calc(100% + 2px);
+    border: 1px solid #fff;
+    height: 0;
+    bottom: -1px;
+    position: absolute;
+    overflow: hidden;
+    left: -1px;
+}
+.cardDiv .card_div_button .card-btn-details {
+    transition: all .2s ease;
+    background-color: #ff6000;
+    font-size: 1rem;
+    padding: 9px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid #ed6003;
+    border-radius: 0.2143rem;
+    width: 90%;
+    display: block;
+    height: 39px;
+    line-height: 20px;
+    margin: 0 auto;
 }
 .add-product-button {
     margin-top : -15px
@@ -47,12 +66,18 @@
     height: 224px; 
     width: 224;
     max-width: 224px;
+
+}
+.card-item-img{
+    border-bottom: 1px solid #ccc; 
 }
 
 .card-item-container > .MuiCardContent-root {
     padding-bottom: 15px !important;
 }
-/* .cardDiv {
-    padding-top: 1em;
-} */
+.cardDiv {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+} 
 

@@ -9,6 +9,7 @@ import Contacto from './pages/Contact';
 import Detalle from './pages/Detalle';
 import NotFound from './pages/NotFound';
 import Cart from './pages/Cart/Cart'
+import Ofertas from './pages/Ofertas';
 import LogIn from './pages/LogIn';
 import SignUp from '../src/pages/SignUp';
 import { CartProvider } from './context/CartContext';
@@ -33,12 +34,13 @@ function App() {
                 <Route path='/product/:id' element={ <Detalle />}/>
                 <Route path='/products/:category' element={<ProductList />}/>
                 <Route path='/cart' element={<Cart />}/>
+                <Route path='/ofertas' element={<Ofertas />}/>
                 <Route path='*' element={<NotFound />}/>  
               </Route>
               <Route path='/login' element={<LogIn />}/>
               <Route path='/signup' element={<SignUp />}/>
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </BrowserRouter>
       </CartProvider>
     </div>
