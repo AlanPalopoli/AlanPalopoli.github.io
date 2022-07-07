@@ -10,7 +10,6 @@
     margin-top: -15px;
     text-align: center;
 }
-
 .card-item-container {
     margin-left: 3em; 
     margin-right: 1em;
@@ -18,7 +17,6 @@
     box-shadow: none !important;
     border: 1px solid #ccc; 
 }
-
 .cardDiv:not(:hover) .card_div_button{
     transition: all .2s ease-out;
     display: block;
@@ -54,11 +52,9 @@
 .add-product-button {
     margin-top : -15px
 }
- 
 .button-count {
     display: flex;
 }
-
 .button-cart {
     margin-top: -20px;
 }
@@ -66,12 +62,10 @@
     height: 224px; 
     width: 224;
     max-width: 224px;
-
 }
 .card-item-img{
     border-bottom: 1px solid #ccc; 
 }
-
 .card-item-container > .MuiCardContent-root {
     padding-bottom: 15px !important;
 }

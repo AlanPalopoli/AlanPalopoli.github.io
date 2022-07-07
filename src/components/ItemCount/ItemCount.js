@@ -12,7 +12,6 @@ const ItemCount = ({ image, title, price, stock, id,  description, color, storag
     const [countItem, setCount] = useState(1)
     const { addProductToCart } = useContext(CartContext)
     const [showToastify, setShowToastify] = useState()
-
     const [open, setOpen] = useState(false);
 
     const handleClick = () => {
@@ -26,8 +25,6 @@ const ItemCount = ({ image, title, price, stock, id,  description, color, storag
 
         setOpen(false);
     };
-
-
 
     const getToastify = ()  => {
         return (
@@ -75,7 +72,6 @@ const ItemCount = ({ image, title, price, stock, id,  description, color, storag
         }
     }
 
-
     return (
         <div style={{textAlign:'center'}}>
             <div className='countItem'>
@@ -91,27 +87,3 @@ const ItemCount = ({ image, title, price, stock, id,  description, color, storag
 }
 
 export default ItemCount
-
-
-
-
-
-/* export default function CustomizedSnackbars() {
-  
-  return (
-    
-      <Button variant="outlined" onClick={handleClick}>
-        Open success snackbar
-      </Button>
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-          This is a success message!
-        </Alert>
-      </Snackbar>
-      
-      <Alert severity="warning">This is a warning message!</Alert>
-      <Alert severity="info">This is an information message!</Alert>
-      <Alert severity="success">This is a success message!</Alert>
-    </Stack>
-  );
-} */

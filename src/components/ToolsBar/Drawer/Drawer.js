@@ -4,7 +4,6 @@ import { Button } from "@mui/material"
 import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ComputerIcon from '@mui/icons-material/Computer';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import MouseIcon from '@mui/icons-material/Mouse';
@@ -80,13 +79,7 @@ const Drawer = () => {
           onKeyDown={toggleDrawer(anchor, false)}
         >
           <List>
-            {/* [
-                'Televisores', 
-                'Computadoras', 
-                'Celulares', 
-                'Consolas',
-                'Contacto'
-            ] */categorias.map((text, index) => (
+            {categorias.map((text, index) => (
               <ListItem key={index} disablePadding>
                 <ListItemButton>
                   <ListItemIcon>
@@ -98,19 +91,6 @@ const Drawer = () => {
               </ListItem>
             ))}
           </List>
-          {/* <Divider />
-          <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List> */}
         </Box>
       );
 

@@ -39,19 +39,8 @@ const ItemListContainer = ({title}) => {
         })
     }, [category])
 
-   
-/*     const filterProducts = (arrayProducts) => {
-        return arrayProducts.map((product) => { 
-            if(product.category == category){
-                return setProducts(products => [...products, product])
-            }
-        })
-    }
- */
-
     return (
         <div>
-            {/* <Typography variant="overline" component="div" sx={{fontSize: 30, flexGrow: 1 , marginTop: 2, textAlign:'center', marginLeft: 2, paddingTop:4}}>{title}</Typography> */}
             <ItemList title={title} products={products} category ={category} />
         </div>
     )

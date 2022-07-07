@@ -1,5 +1,4 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-/* import Button from '@mui/material/Button'; */
 import Menu from '@mui/material/Menu';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CartContext from '../../../context/CartContext'
@@ -13,20 +12,20 @@ const CartWidget = () => {
     const { cartListItems, totalPrice, deleteProductToCart } = useContext(CartContext)
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
+    
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
         setAnchorEl(null);
     };
-
     const theme = createTheme({
         palette: {
           primary: {
                main: '#000000'
           }
         }
-      });
+    });
 
     return(
         <div className='cart-container-icon'>
@@ -55,21 +54,21 @@ const CartWidget = () => {
                     )}
                     {cartListItems.map( (item) => {
                         return(
-                        <div className='item-cart-prod' key={item.id}>
-                            <div className='cart-prod-image'>
-                                <img src={`/img/${item.image[0]}`} alt="prod carrito" />
+                            <div className='item-cart-prod' key={item.id}>
+                                <div className='cart-prod-image'>
+                                    <img src={`/img/${item.image[0]}`} alt="prod carrito" />
+                                </div>
+                                <div className='cart-prod-info'>
+                                    <span>{item.title}</span>
+                                    <span>${item.price}</span>
+                                    <span>Cantidad: {item.countItem}</span>
+                                </div>
+                                <div className='cart-icon-delete'>
+                                    <button onClick={() => deleteProductToCart(item)}>
+                                        <DeleteIcon />
+                                    </button>
+                                </div>
                             </div>
-                            <div className='cart-prod-info'>
-                                <span>{item.title}</span>
-                                <span>${item.price}</span>
-                                <span>Cantidad: {item.countItem}</span>
-                            </div>
-                            <div className='cart-icon-delete'>
-                                <button onClick={() => deleteProductToCart(item)}>
-                                    <DeleteIcon />
-                                </button>
-                            </div>
-                        </div>
                         )
                     })
                     }
@@ -84,9 +83,6 @@ const CartWidget = () => {
                             </ThemeProvider>
                         </>
                     )}
-
-
-                    
                 </div>
             </Menu>
         </div>

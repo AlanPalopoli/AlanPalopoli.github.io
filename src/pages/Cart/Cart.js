@@ -60,7 +60,6 @@ const Cart = () => {
         const orderFirebase = collection(db, 'ordenes')
         const orderDoc = await addDoc(orderFirebase, newOrder)
         setSuccess(orderDoc.id)
-        /* cleanCartProducts() */
     }
         
     return (
@@ -106,53 +105,52 @@ const Cart = () => {
                                 </TableBody>
                             </Table>
                             <footer className="cart-footer">
-                            Precio Total: ${totalPrice}
-                            <div>
-                                <button onClick={() => setShowModal(true)} className="cart-footer-button"> Terminar Compra </button>
-                            </div>
-                            
+                                Precio Total: ${totalPrice}
+                                <div>
+                                    <button onClick={() => setShowModal(true)} className="cart-footer-button"> Terminar Compra </button>
+                                </div>
                             </footer>
                         </TableContainer>
                         }
                     <Modal title={success ? <h3 style={{textAlign: "center"}}>Compra realizada</h3> : 'Formulario de contacto'} open={showModal} handleClose={() => setShowModal(false)}>
-                    {success ? (
-                        <div className="order-success-text">
-                            <h5>¡La compra ha sido realizada!<br />
-                                Numero de orden: {success}</h5>
-                                <div className="order-success-form">
-                                    <button onClick={finishOrder}>Aceptar</button>
-                                </div>
-                            
-                        </div>
-                    ) : (
-                        <form className="form-contact-submit" onSubmit={handleSubmit}>
-                            <TextField 
-                                id="outlined-basic" 
-                                name="name"
-                                label="Nombre y Apellido" 
-                                variant="outlined" 
-                                value={formValue.name}
-                                onChange={handleChange}
-                            />
-                            <TextField 
-                                id="outlined-basic" 
-                                name="phone"
-                                label="Telefono" 
-                                variant="outlined" 
-                                value={formValue.phone}
-                                onChange={handleChange}
-                            />
-                            <TextField 
-                                id="outlined-basic" 
-                                name="email"
-                                label="Mail" 
-                                value={formValue.email}
-                                variant="outlined" 
-                                onChange={handleChange}
-                            />
-                            <button type="submit">Terminar</button>
-                        </form>
-                    )}
+                        {success ? (
+                            <div className="order-success-text">
+                                <h5>¡La compra ha sido realizada!<br />
+                                    Numero de orden: {success}</h5>
+                                    <div className="order-success-form">
+                                        <button onClick={finishOrder}>Aceptar</button>
+                                    </div>
+                                
+                            </div>
+                        ) : (
+                            <form className="form-contact-submit" onSubmit={handleSubmit}>
+                                <TextField 
+                                    id="outlined-basic" 
+                                    name="name"
+                                    label="Nombre y Apellido" 
+                                    variant="outlined" 
+                                    value={formValue.name}
+                                    onChange={handleChange}
+                                />
+                                <TextField 
+                                    id="outlined-basic" 
+                                    name="phone"
+                                    label="Telefono" 
+                                    variant="outlined" 
+                                    value={formValue.phone}
+                                    onChange={handleChange}
+                                />
+                                <TextField 
+                                    id="outlined-basic" 
+                                    name="email"
+                                    label="Mail" 
+                                    value={formValue.email}
+                                    variant="outlined" 
+                                    onChange={handleChange}
+                                />
+                                <button type="submit">Terminar</button>
+                            </form>
+                        )}
                     </Modal>
                         
                 </div>

@@ -14,10 +14,9 @@ const ItemDetail = ({data}) => {
     const [arrayImage, setArrayImage] = useState()
     const [showColor, setColor] = useState('');
     const [showStorage, setStorage] = useState('');
-    const [showToastifyValue, setToastifyValue] = useState(false)
 
     const getImage = ()  => {
-        return new Promise( (resolve, reject) => {
+        return new Promise( (resolve) => {
             setTimeout(() => {
                 if(data.image != undefined) {
                     resolve(
@@ -71,7 +70,6 @@ const ItemDetail = ({data}) => {
                                 <Grid container className='container-border-detail'>
                                     <Grid item md={12}>
                                         <div className='itemDetailTittle'>
-                                            {/* <h2>{data.tittle}</h2> */}
                                             <h4>{data.description}</h4>
                                         </div>
                                     </Grid>
@@ -103,12 +101,12 @@ const ItemDetail = ({data}) => {
                                                 </span>
                                             </Grid>
                                             <Grid item md = {12}>
-                                                    <div style={{paddingTop:5}}>
-                                                {data.color.map((itemColor, index)  => {
-                                                    return (
-                                                        <Button key={index} variant='outlined' style={{marginRight:10, marginBottom:5, color:'black', borderColor:"gainsboro", fontFamily:'sans-serif', fontWeight:400}}  onClick={() => setColor(itemColor)}> {itemColor}  </Button>
-                                                    )
-                                                })
+                                                <div style={{paddingTop:5}}>
+                                                    {data.color.map((itemColor, index)  => {
+                                                        return (
+                                                            <Button key={index} variant='outlined' style={{marginRight:10, marginBottom:5, color:'black', borderColor:"gainsboro", fontFamily:'sans-serif', fontWeight:400}}  onClick={() => setColor(itemColor)}> {itemColor}  </Button>
+                                                        )
+                                                    })
                                                 }
                                                 </div>
                                             </Grid>
@@ -177,7 +175,9 @@ const ItemDetail = ({data}) => {
                                                     />
                                                 :
                                                 <div style={{textAlign:'center'}}>
-                                                    <Button  variant="text" > <Link to={'/cart'} style={{ textDecoration: 'none', backgroundColor: 'black', color: 'white', borderRadius: 20, border: 5,  fontFamily: 'system-ui', fontSize: 14, paddingRight: 10, paddingLeft: 10 }} >Finalizar compra</Link></Button>
+                                                    <Button  variant="text" > 
+                                                        <Link to={'/cart'} style={{ textDecoration: 'none', backgroundColor: 'black', color: 'white', borderRadius: 20, border: 5,  fontFamily: 'system-ui', fontSize: 14, paddingRight: 10, paddingLeft: 10 }} >Finalizar compra</Link>
+                                                    </Button>
                                                 </div>
                                                 }
                                             </Grid>
