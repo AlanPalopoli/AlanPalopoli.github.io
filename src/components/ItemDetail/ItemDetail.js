@@ -112,7 +112,7 @@ const ItemDetail = ({data}) => {
                                             </Grid>
                                         </Grid>
                                         }
-                                        {data.color &&
+                                        {data.storage &&
                                         <Grid container className='product-detail-spacing'>
                                             <Grid item md ={12}>
                                                 <span className='text-tittles'>

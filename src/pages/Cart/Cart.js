@@ -95,7 +95,7 @@ const Cart = () => {
                                                     <img src={`/img/${item.image[0]}`} alt="prod carrito" style={{ height: '130px'}} />
                                                 </TableCell>
                                                 <TableCell align="right">{item.title}</TableCell>
-                                                <TableCell align="right">{item.description}</TableCell>
+                                                <TableCell align="right">{item.description} {item.colorPick} {item.storagePick}</TableCell>
                                                 <TableCell align="right">{item.price}</TableCell>
                                                 <TableCell align="right">{item.countItem}</TableCell>
                                                 <TableCell align="right"> <Button  onClick={() => deleteProductToCart(item)}> <DeleteIcon /> </Button> </TableCell>

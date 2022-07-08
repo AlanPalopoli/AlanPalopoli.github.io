@@ -8,7 +8,7 @@ import CardContent from '@mui/material/CardContent';
 const Item = ({tittle, image, price, stock, id, description}) => {
    
     return (
-        <Card elevation={0} className='card-item-container'>
+        <Card sx={{minWidth:259}} elevation={0} className='card-item-container'>
             <CardContent>
                 <div className='cardDiv'>
                     <div className='card-item-img'>
@@ -19,7 +19,7 @@ const Item = ({tittle, image, price, stock, id, description}) => {
                             {tittle}
                             </Typography>
                             <h3>${price}</h3>
-                            <h6>{description}</h6>
+                            {/* <h6>{description}</h6> */}
                     </div>
                     <div className='card_div_button'>
                         <Button variant={'contained'} className='card-btn-details'>

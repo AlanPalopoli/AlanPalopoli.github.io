@@ -13,10 +13,7 @@ const ItemCount = ({ image, title, price, stock, id,  description, color, storag
 
     const getToastify = ()  => {
         return (
-            !color || !storage ? 
-            addProductToCart(({ image, title, price, stock, id, countItem,  description}), setShowButton(true))
-            :
-            (color || storage) && (!colorPick  || !storagePick) ?
+            ((color && !colorPick)  || (storage && !storagePick)) ?
             (
             <>
             {
