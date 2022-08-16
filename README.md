@@ -1,6 +1,6 @@
 # Ecommerce TodoElectronica
 
-This project was made with ReactJS, it was done as an exercise for a course on the CoderHouse platform. It is an ecommerce of electronic products but it can be extended to other types of products.
+This project was made with ReactJS as an exercise for a course on the CoderHouse platform. It is an ecommerce of electronic products but it can be extended to other types of products.
 The most used library was MUI Material with it I shaped the buttons, the icons and others. Another library I used was swiper, to be able to slide through the different objects, and the last library was Toastify for notifications. I really enjoyed doing this project and will surely use it in the future.
 
 GIF:
